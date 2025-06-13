@@ -39,6 +39,7 @@ def test_add_chat_to_message():
 
     assert message in chat.messages
 
+
 def test_message_new_event():
     text = Text('Hello')
     message = Message(text=text)
