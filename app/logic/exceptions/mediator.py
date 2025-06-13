@@ -12,10 +12,10 @@ class EventHandlerNotRegistered(LogicException):
         return f'Не удалось найти обработчики для события: {self.event_type}'
 
 
-@dataclass(frozen=True, eq=False)
+@dataclass(eq=False)
 class CommandHandlerNotRegistered(LogicException):
     command_type: type
 
     @property
     def message(self):
-        return f'Не удалось найти обработчик для комманды: {self.command_type}'
+        return f'Не удалось найти обработчики для комманды: {self.command_type}'

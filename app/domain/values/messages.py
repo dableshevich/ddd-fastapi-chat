@@ -7,8 +7,6 @@ from domain.exceptions.messages import (TitleTooLongException,
 
 @dataclass(frozen=True)
 class Text(BaseValueObject):
-    value: str
-
     def validate(self):
         if not self.value:
             raise EmptyTextError()
@@ -19,7 +17,6 @@ class Text(BaseValueObject):
 
 @dataclass(frozen=True)
 class Title(BaseValueObject):
-
     def validate(self):
         if not self.value:
             raise EmptyTextError()

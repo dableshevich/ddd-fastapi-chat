@@ -15,3 +15,5 @@ def chat_repository():
 def mediator(chat_repository: BaseChatRepository):
     mediator = Mediator()
     init_mediator(mediator=mediator, chat_repository=chat_repository)
+
+    return mediator

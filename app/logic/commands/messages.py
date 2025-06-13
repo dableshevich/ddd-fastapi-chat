@@ -13,7 +13,7 @@ class CreateChatCommand(BaseCommand):
 
 
 @dataclass(frozen=True)
-class CreateChatCommandHandler(CommandHandler[CreateChatCommand]):
+class CreateChatCommandHandler(CommandHandler[CreateChatCommand, Chat]):
     chat_repository: MemoryChatRepository
 
     async def handle(self, command: CreateChatCommand):
